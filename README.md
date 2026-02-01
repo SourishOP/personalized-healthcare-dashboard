@@ -3,7 +3,7 @@
 ## 1. Vision Document
 
 ### Project Name & Overview
-**Project Name**: Universal Health Dashboard (UHD)
+**Project Name**: Personalized Health Dashboard 
 **Overview**: A centralized, secure, and HIPAA-compliant platform for individuals to aggregate their health data (vitals, medications, logs) and allow secure access for caregivers and healthcare providers.
 
 ### Problem it Solves
@@ -80,6 +80,7 @@ We follow **GitHub Flow** for simplicity and continuous delivery:
 4.  **Verify**:
     - Check terminal logs for `Server running on port 5000`.
     - Go to `/register` to create an account.
+
 
 
 
