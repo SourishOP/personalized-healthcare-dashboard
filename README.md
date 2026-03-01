@@ -81,7 +81,17 @@ We follow **GitHub Flow** for simplicity and continuous delivery:
     - Check terminal logs for `Server running on port 5000`.
     - Go to `/register` to create an account.
 
+## Software Design
+### Architecture & Design Choices
+The application utilizes a Client-Server and Layered Architecture pattern to ensure separation of concerns between the user interface, business logic, and database. By applying principles like low coupling and modularity, we separated the authentication logic from the core health-logging features, ensuring maintainability and adherence to strict HIPAA security constraints.
+
+View Architecture Diagram
+
+View UI Prototypes & Figma Screens
 
 
+<<<<<<< HEAD
 
 # personalized-healthcare-dashboard
+=======
+>>>>>>> 96c0188 (Initial commit)
