@@ -1,6 +1,10 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import BottomNav from './components/BottomNav.vue'
+import { computed } from 'vue'
+
+const route = useRoute()
+const showNav = computed(() => !['/login', '/register'].includes(route.path))
 </script>
 
 <template>
@@ -8,7 +12,7 @@ import BottomNav from './components/BottomNav.vue'
     <main class="screen-container">
       <RouterView />
     </main>
-    <BottomNav />
+    <BottomNav v-if="showNav" />
   </div>
 </template>
 

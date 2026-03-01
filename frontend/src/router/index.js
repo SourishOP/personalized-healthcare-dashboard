@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
-import Login from '../views/Login.vue'
-import Dashboard from '../views/Dashboard.vue'
+import AuthScreen from '../views/AuthScreen.vue'
+import DashboardScreen from '../views/DashboardScreen.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -9,19 +9,41 @@ const router = createRouter({
         {
             path: '/login',
             name: 'login',
-            component: Login,
+            component: AuthScreen,
             meta: { guest: true }
         },
         {
             path: '/register',
-            name: 'register',
-            component: () => import('../views/Register.vue'),
-            meta: { guest: true }
+            redirect: '/login'
         },
         {
             path: '/dashboard',
             name: 'dashboard',
-            component: Dashboard,
+            component: DashboardScreen,
+            meta: { requiresAuth: true }
+        },
+        {
+            path: '/log',
+            name: 'log',
+            component: () => import('../views/LogVitalsScreen.vue'),
+            meta: { requiresAuth: true }
+        },
+        {
+            path: '/trends',
+            name: 'trends',
+            component: () => import('../views/TrendsScreen.vue'),
+            meta: { requiresAuth: true }
+        },
+        {
+            path: '/reminders',
+            name: 'reminders',
+            component: () => import('../views/RemindersScreen.vue'),
+            meta: { requiresAuth: true }
+        },
+        {
+            path: '/settings',
+            name: 'settings',
+            component: () => import('../views/SettingsScreen.vue'),
             meta: { requiresAuth: true }
         },
         {
